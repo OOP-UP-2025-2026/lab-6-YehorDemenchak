@@ -2,11 +2,11 @@ package ua.opnu.list;
 
 import java.util.Comparator;
 
-public class NameSorter implements Comparator {
+public class LastNameSorter implements Comparator {
 
     private boolean order;
 
-    public NameSorter(boolean order) {
+    public LastNameSorter(boolean order) {
         this.order = order;
     }
 
@@ -17,9 +17,9 @@ public class NameSorter implements Comparator {
             Student s2 = (Student) o2;
 
             if (order) {
-                return s1.getName().compareTo(s2.getName());
+                return s1.getLastName().compareTo(s2.getLastName());
             } else {
-                return s2.getName().compareTo(s1.getName());
+                return s2.getLastName().compareTo(s1.getLastName());
             }
         }
         return 0;
